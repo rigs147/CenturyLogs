@@ -6,13 +6,13 @@
 angular.module('app.controllers', [])
 
     // Path: /
-    .controller('HomeCtrl', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+    .controller('HomeCtrl', ['$scope', '$location', '$window', '$log', function ($scope, $location, $window, $log) {
         $scope.$root.title = 'Century Link';
         $scope.$on('$viewContentLoaded', function () {
             $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
         });
 
-        window.alert("yo");
+        $log.info('yo');
 
         $scope.model = {
             accountId: null
