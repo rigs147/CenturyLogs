@@ -1,0 +1,24 @@
+﻿@{
+    PageData["title"] = "Century Link";
+}
+<h2>Welcome</h2>
+
+<div class="container" ng-controller="HomeCtrl">
+    <div class="col-md-10">
+        <div class="ao-page-title">Enter account id to view summary</div>
+
+        <form class="form-search text-center" name="AccountForm"
+              ng-submit="accountSearch(model.accountId)">
+
+
+            <div class="form-group form-inline pull-left">
+                <label>Account Id</label>
+                <input class="form-control" name="account" ng-model="model.accountId" type="search"
+                       placeholder="Enter your account id" />
+                <input type="submit" class="btn btn-sm btn-default" value="Find" />
+            </div>
+
+
+        </form>
+    </div>
+</div>
